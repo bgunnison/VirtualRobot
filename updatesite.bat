@@ -1,0 +1,1 @@
+scp -i ..\oldsitevirtualrobot\id_rsa -r .\dist\* irtualv6@50.87.248.20:/home1/irtualv6/public_html/

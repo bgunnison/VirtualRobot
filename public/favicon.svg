@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="tube" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#1fb7df" />
+      <stop offset="50%" stop-color="#7cecff" />
+      <stop offset="100%" stop-color="#27c9f1" />
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g fill="none" filter="url(#glow)" stroke-linecap="round" stroke-linejoin="round">
+    <path
+      d="M18 49 L17 25 Q17 12 29 12 H38 Q48 12 48 23 L48 46"
+      stroke="url(#tube)"
+      stroke-width="8"
+    />
+    <path d="M17 48 L16 57" stroke="url(#tube)" stroke-width="7" />
+    <path d="M48 46 L54 49" stroke="url(#tube)" stroke-width="7" />
+    <path
+      d="M20.5 46 L19.8 25.5 Q19.8 15 29.8 15 H37.2 Q45.2 15 45.2 24 L45.2 43.5"
+      stroke="#d8fbff"
+      stroke-opacity=".45"
+      stroke-width="2.2"
+    />
+  </g>
+</svg>
