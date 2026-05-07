@@ -1,5 +1,6 @@
 import beatUi from '../media/BeatUI.png'
 import breathalyzerUi from '../media/BreathalyzerUI.png'
+import chimeUi from '../media/chimeui.png'
 import pinchfxUi from '../media/PinchfxUI.png'
 import logoStrip from '../media/beat-logo-strip.png'
 import logoSmall from '../media/virtualrobot-logo-small.gif'
@@ -25,6 +26,7 @@ export const projects = [
     imageAlt: 'Beat plugin UI showing eight Euclidean rhythm lanes and lane controls.',
     strip: logoStrip,
     downloadLabel: 'Download Beat.vst3.zip',
+    zipName: 'Beat.vst3.zip',
   },
   {
     slug: 'pinchfx',
@@ -43,6 +45,7 @@ export const projects = [
     imageAlt: 'PinchFX plugin UI showing input, output, and three voice harmonic controls.',
     strip: logoStrip,
     downloadLabel: 'Download PinchFX.vst3.zip',
+    zipName: 'PinchFX.vst3.zip',
   },
   {
     slug: 'breathalyzer',
@@ -60,6 +63,25 @@ export const projects = [
     imageAlt: 'Breathalyzer plugin UI showing breath, voice, and humanize controls.',
     strip: logoStrip,
     downloadLabel: 'Download Breathalyzer.vst3.zip',
+    zipName: 'Breathalyzer.vst3.zip',
+  },
+  {
+    slug: 'chime',
+    repo: 'Chime',
+    branch: 'main',
+    title: 'Chime',
+    kind: 'Instrument',
+    heroLine: 'Physically modeled struck bar.',
+    summary:
+      'Chime is a VST3 instrument that physically models a struck bar with modal synthesis.',
+    details:
+      'MIDI notes trigger long natural decays, while logarithmic decay, per-note detune, and character selections shape the material response.',
+    bullets: ['Struck cylindrical bar / chime model', 'Long ringing decay after note-off', 'Decay, random detune, and material character controls'],
+    image: chimeUi,
+    imageAlt: 'Chime plugin UI showing decay, detune, and character controls.',
+    strip: logoStrip,
+    downloadLabel: 'Download Chime.vst3.zip',
+    zipName: 'Chime.vst3.zip',
   },
 ]
 
@@ -74,8 +96,5 @@ export function getSourceUrl(project) {
 }
 
 export function getZipUrl(project) {
-  const zipName =
-    project.repo === 'beat' ? 'Beat.vst3.zip' : project.repo === 'PinchFx' ? 'PinchFX.vst3.zip' : 'Breathalyzer.vst3.zip'
-
-  return `https://raw.githubusercontent.com/${owner}/${project.repo}/${project.branch}/${zipName}`
+  return `https://raw.githubusercontent.com/${owner}/${project.repo}/${project.branch}/${project.zipName}`
 }
